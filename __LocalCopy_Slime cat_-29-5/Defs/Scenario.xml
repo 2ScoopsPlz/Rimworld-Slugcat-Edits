@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ScenarioDef>
+        <defName>NewSlimecat</defName>
+        <label>Slime cat tribe</label>
+        <description></description>
+        <scenario>
+            <summary></summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>Faction_Slimecat</factionDef>
+            </playerFaction>
+			<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>4</pawnCount>
+					<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+			</li>
+			<li Class="ScenPart_Naked">
+				<def>Naked</def>
+				<context>PlayerStarter</context>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+			<def>GameStartDialog</def>
+			<text></text>
+			<closeSound>GameStartSting</closeSound>
+			</li>
+			</parts>
+        </scenario>
+    </ScenarioDef>
+
+</Defs>

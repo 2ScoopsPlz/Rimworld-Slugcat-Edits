@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Slimecat</defName>
+		<label>Slime cat</label>
+		<description>A strange slug type creature that seems to have been spliced with a feline of some sort. Its eyes carry a glint of intelligence.</description>
+		<!--Basic Settings-->
+		<alienRace>
+			<generalSettings>
+				<maleGenderProbability>0.5</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<maxDamageForSocialfight>2</maxDamageForSocialfight>
+				<humanRecipeImport>true</humanRecipeImport>			
+				<allowHumanBios>true</allowHumanBios>
+				<alienPartGenerator>
+					<aliencrowntypes>
+						<li>Average_Normal</li>
+					</aliencrowntypes>
+					<alienbodytypes>
+						<li>Male</li>
+						<li>Female</li>
+					</alienbodytypes>
+					<useGenderedHeads>true</useGenderedHeads>
+					<customDrawSize>(0.8,0.8)</customDrawSize>
+					<customHeadDrawSize>(0.8,0.8)</customHeadDrawSize>
+					<customPortraitDrawSize>(1,1)</customPortraitDrawSize>
+					<customPortraitHeadDrawSize>(1,1)</customPortraitHeadDrawSize> 
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>100</weight>
+										<only>RGBA(1,1,1, 1.000)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>100</weight>
+										<only>RGBA(1,1,1, 1.000)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+			</styleSettings>
+
+
+
+
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+
+
+			<!--Graphic Paths-->	 
+			<graphicPaths>
+				<li>
+					<head>SlimeСat/Heads/</head>
+					<body>SlimeСat/Bodies/</body>
+				</li>
+			</graphicPaths>
+			<!--Thoughts Settings-->
+			<thoughtSettings>
+				<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll>
+				<cannotReceiveThoughts>
+                    <li>Naked</li>
+					<li>AteCorpse</li>
+					<li>AteRawFood</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+			
+			<!--Relation Settings-->
+			<!--Restriction Settings-->
+			
+			<raceRestriction>
+				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+			</raceRestriction>
+		</alienRace>
+		<!--=============================================================================================================================-->
+		<statBases>
+			<PawnBeauty>1</PawnBeauty>
+            <MeleeDodgeChance>1.5</MeleeDodgeChance>
+			<ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+			<MeleeHitChance>1.5</MeleeHitChance>
+			<AimingDelayFactor>0.66</AimingDelayFactor>
+			<PawnTrapSpringChance>0.33</PawnTrapSpringChance>
+            <MarketValue>850</MarketValue>
+	        <ImmunityGainSpeed>1</ImmunityGainSpeed>
+			<BiosculpterOccupantSpeed>3</BiosculpterOccupantSpeed>
+			<MentalBreakThreshold>0.25</MentalBreakThreshold>
+            <MoveSpeed>6</MoveSpeed>
+            <ComfyTemperatureMin>16</ComfyTemperatureMin>
+            <ComfyTemperatureMax>28</ComfyTemperatureMax>
+            <RoyalFavorValue>3</RoyalFavorValue>
+	        <WorkSpeedGlobal>1</WorkSpeedGlobal>
+			<TameAnimalChance>3</TameAnimalChance>
+			<TrainAnimalChance>3</TrainAnimalChance>
+			<IncomingDamageFactor>0.66</IncomingDamageFactor>
+			<FoodPoisonChance>0.01</FoodPoisonChance>
+            <PainShockThreshold>0.9</PainShockThreshold>
+		</statBases>
+		<!--=============================================================================================================================-->
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<!--=============================================================================================================================-->
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>25</lifeExpectancy>
+			<nameCategory>HumanStandard</nameCategory>
+			<body>Body_Slimecat</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
+			<foodType>OmnivoreHuman</foodType>
+			<baseHungerRate>0.625</baseHungerRate>
+			<meatMarketValue>3.0</meatMarketValue>
+			<gestationPeriodDays>10</gestationPeriodDays>
+			<manhunterOnDamageChance>0.01</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeToddler</def>
+					<minAge>1</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>2</minAge>
+				</li>
+				<li>
+					<def>SlimecatlikeTeenager</def>
+					<minAge>3</minAge>
+				</li>
+				<li>
+					<def>SlimecatlikeAdult</def>
+					<minAge>5</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<hediffGiverSets>
+				<li>OrganicSlime</li>
+			</hediffGiverSets>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+	<!--=============================================================================================================================-->
+	<!--=============================================================================================================================-->
+	<!--=============================================================================================================================-->
+
+	<!-- Lifestage -->
+	<LifeStageDef>
+		<defName>SlimecatlikeTeenager</defName>
+		<label>teenager</label>
+		<adjective>teenage</adjective>
+		<reproductive>true</reproductive>
+		<bodySizeFactor>0.8</bodySizeFactor>
+		<healthScaleFactor>0.8</healthScaleFactor>
+		<meleeDamageFactor>0.8</meleeDamageFactor>
+		<statFactors>
+		<MoveSpeed>0.8</MoveSpeed>
+		</statFactors>
+		<foodMaxFactor>2.0</foodMaxFactor>
+	</LifeStageDef>
+	<LifeStageDef>
+		<defName>SlimecatlikeAdult</defName>
+		<label>adult</label>
+		<reproductive>true</reproductive>
+		<foodMaxFactor>2.0</foodMaxFactor>
+		<bodySizeFactor>1</bodySizeFactor>
+	</LifeStageDef>
+</Defs>
